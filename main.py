@@ -1,11 +1,13 @@
 from kivy.app import App
+from kivy.config import Config
 from kivy.uix.widget import Widget
 from kivy.properties import ObjectProperty
 from kivy.lang import Builder
 from kivy.core.window import Window
 # set window size
-Window.size = (300, 450)
+# Window.size = (300, 450)
 # load the string for design
+Config.set('graphics', 'resizable', True)
 Builder.load_string("""
 <CalLayout>
     BoxLayout:
